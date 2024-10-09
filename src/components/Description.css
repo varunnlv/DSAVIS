@@ -1,0 +1,163 @@
+.details-container {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  background-color: #a8ca7c;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 650px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 500px; /* Set a fixed height */
+}
+
+.scrollable-content {
+  overflow-y: auto;
+  flex-grow: 1; /* Ensure it takes up available space */
+  padding-bottom: 60px; /* Space for pagination controls */
+}
+
+.pagination-controls {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* No changes needed for other CSS */
+
+.algorithm-details,
+.maze-details,
+.intro-page {
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.algorithm,
+.maze-type {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+h3 {
+  color: #34495e;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+p {
+  color: #4a4a4a;
+  font-size: 16px;
+}
+
+span {
+  align-self: center;
+  color: #333;
+  font-size: 16px;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+  color: #0e0e0e;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.close-button:hover {
+  color: #888;
+  transform: rotate(90deg);
+}
+
+.intro-page ul {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.intro-page li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.intro-page span {
+  display: inline-block;
+  width: 100px;
+  margin-right: 10px;
+  padding: 5px 0;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+.start {
+  background-color: #27ae60;
+}
+.wall {
+  background-color: #04263c;
+}
+.finish {
+  background-color: #c0392b;
+}
+.shift {
+  background-color: #b0b0b0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .details-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .algorithm,
+  .maze-type,
+  .intro-page ul {
+    padding: 10px;
+  }
+
+  h2,
+  h3,
+  p,
+  .intro-page li {
+    margin-bottom: 15px;
+  }
+
+  .pagination-controls,
+  .algorithm-details,
+  .maze-details,
+  .intro-page {
+    flex-direction: column;
+  }
+
+  .intro-page span {
+    width: auto; /* Allow the text to determine size */
+  }
+}

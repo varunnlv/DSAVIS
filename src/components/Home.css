@@ -1,0 +1,80 @@
+.main {
+  /* background-color: rgb(231, 231, 231); */
+  background-color: white;
+  opacity: 1;
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Hero Section Styles */
+#hero {
+  background: linear-gradient(to right, #ffffff, rgb(105, 112, 124)); /* Gradient background */
+  color: white; /* Text color */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content */
+  align-items: center; /* Center content vertically */
+  text-align: right; /* Align text to the right */
+  position: relative; /* Position for absolute elements */
+  overflow: hidden; /* Hide overflow for animations */
+}
+
+/* Container Styles */
+.container {
+  max-width: 800px; /* Max width for the container */
+  padding: 20px; /* Padding */
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 3rem; /* Font size */
+  opacity: 0; /* Start invisible */
+  transform: translateX(-50px); /* Start from the right */
+  animation: slide-in 1s forwards 0.5s; /* Animation */
+}
+
+/* Animation for h1 */
+@keyframes slide-in {
+  to {
+      opacity: 1; /* Fade in */
+      transform: translateX(0); /* Move to original position */
+  }
+}
+
+/* Button Styles */
+.btn-get-started {
+  background: transparent; /* Button background */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  padding: 15px 30px; /* Padding */
+  font-size: 1.2rem; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s, transform 0.3s; /* Transition */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Inline block for spacing */
+  opacity: 0; /* Start invisible */
+  transform: translateX(-50px); /* Start from the right */
+  animation: slide-in 1s forwards 0.9s; /* Animation */
+}
+
+/* Button Hover Effect */
+.btn-get-started:hover {
+  background: #4a90e2; /* Change background on hover */
+  color: white; /* Change text color on hover */
+  transform: scale(1.05); /* Scale up slightly */
+}
+
+/* Additional Text Styles */
+h2 {
+  font-size: 1.5rem; /* Font size for h2 */
+  margin-top: 10px; /* Space above */
+  opacity: 0; /* Start invisible */
+  transform: translateX(-50px); /* Start from the right */
+  animation: slide-in 1s forwards 0.7s; /* Animation */
+}

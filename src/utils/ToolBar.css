@@ -1,0 +1,202 @@
+/* Base styles for body to ensure proper font size is set for em calculations */
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding does not affect overall width */
+}
+
+
+
+
+/* Enhanced Toolbar Styles */
+.toolbar {
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+  background-color: #436461;
+  gap: 2vw; /* Use vw for a viewport width relative gap */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.sidebar-toggle-button {
+  margin-right: auto; /* This pushes the toggle button to the left */
+}
+
+.sidebar-toggle-button2 {
+  font-family: 'Yellowtail', cursive;
+  margin-right: auto; /* This pushes the toggle button to the left */
+  border: none;
+}
+
+.toolbar-center {
+  display: flex;
+  justify-content: center; /* Center the toolbar items */
+  gap: 2vw; /* Add gap between toolbar items */
+}
+
+/* Style adjustments for buttons using em units */
+button {
+  padding: 0.625em 1.25em; /* Adjusted to em for scalability */
+  margin-right: 0.625em; /* Adjusted to em */
+  background-color: transparent;
+  border: 2px solid white; /* Added a solid white border */
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+  background-color: white; /* Background color change on hover */
+  color: black; /* Text color change on hover */
+}
+
+
+.sidebar {
+  width: 370px;
+  position: fixed;
+  left: -370px;
+  top: 70px;
+  height: 100%;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1em;
+  border: 1px solid black;
+  transition: left 0.3s;
+  z-index: 998;
+}
+
+.sidebar.visible {
+  left: 0;
+  animation: slideIn 0.5s forwards; /* Slide in animation */
+}
+
+
+/* Keyframe Animation for Sliding In */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%); /* Start off-screen */
+  }
+  to {
+    transform: translateX(0); /* End at position */
+  }
+}
+
+.sidebar.hidden {
+  animation: slideOut 0.8s forwards; /* Slide out animation */
+}
+
+/* Keyframe Animation for Sliding Out */
+@keyframes slideOut {
+  from {
+    transform: translateX(0); /* Start at position */
+  }
+  to {
+    transform: translateX(-100%); /* Move off-screen */
+  }
+}
+
+.tile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em; /* Space between tiles */
+  margin-top: 1em; /* Space above the tile container */
+  width: 90%;
+}
+
+.tile {
+  flex: 1 1 calc(25% - 1em); /* Adjust tile size and allow them to grow/shrink */
+  background-color: #ececec; /* Light background color for tiles */
+  border: 1px solid #ccc; /* Border around tiles */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1em; /* Padding inside the tile */
+  text-align: center; /* Center text inside the tile */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+  cursor: pointer; /* Indicate that the tiles are clickable */
+}
+
+.tile:hover {
+  background-color: #d1e7ff; /* Change background color on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+
+
+.close-btn {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+/* Dropdown Styles */
+.dropbtn {
+  background-color: transparent;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  color: #034f84;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #d1e7ff;
+  color: #022a5e;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: row; /* Stack toolbar items vertically */
+    padding: 0.5em; /* Reduce padding */
+    gap: 0.5em; /* Reduce gap */
+  }
+
+  button {
+    padding: 0.5em 1em; /* Reduce button size */
+    margin-right: 0; /* Adjust margin */
+    font-size: 0.8em; /* Reduce font size */
+  }
+
+  .dropdown-content {
+    min-width: 120px; /* Adjust dropdown width */
+  }
+}
