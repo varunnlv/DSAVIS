@@ -186,11 +186,11 @@ const Sorting = () => {
         ispathfinderEnabled={false}
       />
 
-      {shouldShowModal && (
-          <div className="modal">
-            <Description />
-          </div>
-      )}
+      {/* {shouldShowModal && (
+          // <div className="modal">
+          //   <Description />
+          // </div>
+      )} */}
 
 
       <section className="inner-page">
@@ -213,55 +213,55 @@ const Sorting = () => {
                 link="/bubblesort" 
                 timeComplexity="Best-case: O(n), Average-case: O(n²), Worst-case: O(n²)"
               />
-              {/* <Card 
+              <Card 
                 title="Cocktail shaker sort" 
                 subtitle="Comparison sort"
                 text="Cocktail shaker sort is an extension of bubble sort that operates in two directions."
-                link="cocktailshakersort.html"
+                link="/cocktailsort"
                 timeComplexity="Best-case: O(n), Average-case: O(n²), Worst-case: O(n²)"
               />
               <Card 
                 title="Combsort" 
                 subtitle="Comparison sort"
                 text="Combsort is an extension of bubble sort that compares elements divided by a shrinking gap."
-                link="combsort.html" 
+                link="/combsort" 
                 timeComplexity="Best-case: O(n log n), Average-case: O(n²), Worst-case: O(n²)"
               />
               <Card 
                 title="Gnomesort" 
                 subtitle="Comparison sort"
                 text="The gnome sort is a sorting algorithm that gets the item to the proper place by a series of swaps."
-                link="gnomesort.html" 
+                link="/gnomesort" 
                 timeComplexity="Best-case: O(n), Average-case: O(n²), Worst-case: O(n²)"
               />
               <Card 
                 title="Insertionsort" 
                 subtitle="Comparison sort"
                 text="Insertion sort builds the final sorted list one item at a time."
-                link="insertionsort.html" 
+                link="/insertionsort" 
                 timeComplexity="Best-case: O(n), Average-case: O(n²), Worst-case: O(n²)"
               />
               <Card 
                 title="Quicksort" 
                 subtitle="Comparison sort"
                 text="Quicksort is a divide-and-conquer algorithm that selects a pivot element and partitions the other elements."
-                link="quicksort.html" 
+                link="/quicksort" 
                 timeComplexity="Best-case: O(n log n), Average-case: O(n log n), Worst-case: O(n²)"
               />
               <Card 
                 title="Selection sort" 
                 subtitle="Comparison sort"
                 text="Selection sort divides the input list into a sorted sublist and an unsorted sublist."
-                link="selectionsort.html" 
+                link="/selectionsort" 
                 timeComplexity="Best-case: O(n), Average-case: O(n²), Worst-case: O(n²)"
-              /> */}
+              />
 
 
             </div>
           </div>
         </section>
-{/* 
-        <section id="non-comparison-sorts" className="pt-0">
+
+        {/* <section id="non-comparison-sorts" className="pt-0">
           <div className="container-fluid w-100">
             <div className="w-50 p-2 rounded explanation row ml-auto mr-auto mt-2 mb-3 cd-hide">
               <div className="col-sm-12">
@@ -285,9 +285,9 @@ const Sorting = () => {
               />
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section id="other-sorts" className="pt-0">
+        {/* <section id="other-sorts" className="pt-0">
           <div className="container-fluid w-100">
             <div className="w-50 p-2 rounded explanation row ml-auto mr-auto mt-2 mb-3 cd-hide">
               <div className="col-sm-12">
