@@ -196,7 +196,7 @@ const Searching = () => {
                  title="Real world path finder" 
                  subtitle="Comparison sort"
                  text=""
-                 link="/realworldpathfinder" 
+                 link="https://searchalgorithonrealmap1.vercel.app/" 
                  timeComplexity=""
               />
         
