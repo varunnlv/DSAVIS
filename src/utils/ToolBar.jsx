@@ -36,8 +36,9 @@ const Sidebar = ({ isVisible, onClose }) => {
 
   const options = [
     // { label: "Data Structures", path: "/data-structures" },
-    { label: "Search Algorithms", path: "/pathfinder" },
+    { label: "Search Algorithms", path: "/searching" },
     { label: "Sorting Algorithms", path: "/sorting" },
+    { label: "Data Structures", path: "/datastructures" },
     // { label: "Trees", path: "/trees" },
   ];
 
